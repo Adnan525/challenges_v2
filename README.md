@@ -1,6 +1,12 @@
 ## Java
+- static {...} in class will execute the block while loading the class before construct call
 - Arrays.stream()
 - mapToInt(mapper) // .mapToInt(Integer::parseInt)
 - sum()
 - sorted()
 - toList()
+- dna.chars() // convert to char
+- mapToObj(c -> (char) c) // when you use the chars() method on a String, it returns an IntStream representing the characters of the string as integer values. Each integer value corresponds to the Unicode code point of the character. However, to work with characters in a more convenient way, you often want to convert these integer values back to characters. That's why we use the mapToObj() method to convert each integer value to its corresponding character representation.
+- map(DnaStrand :: dna_helper) // applying a function
+- map(Object::toString) // convert chat to string
+- collect(Collectors.joining()); //join the strings
