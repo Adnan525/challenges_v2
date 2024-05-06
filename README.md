@@ -1,1 +1,4 @@
-# codechef_500
+## Java
+- Arrays.stream()
+- mapToInt(mapper) // .mapToInt(Integer::parseInt)
+- sum()
