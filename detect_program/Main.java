@@ -38,6 +38,8 @@ public class Main {
 
         sentence.chars().mapToObj(i -> (char)i).forEach(System.out::println);
 
+        sentence.chars().boxed().map(i -> (char)i.intValue()).forEach(System.out::println);
+
         sentence.chars().map(i -> (char)i).forEach(System.out::println);
       }
     

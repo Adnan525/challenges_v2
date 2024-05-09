@@ -49,11 +49,19 @@
 - distinct()
 - count()
 - filter()
+- boxed() \\ take prim type and wrap as object
 ```
     \\ java char[] behaves differently than string[], see detect_program main
+    \\ BECAUSE OF PRIMITIVE DATA TYPE
     public static boolean check_flex(String sentence){
         return sentence.toLowerCase().chars().map(i -> (char) i).distinct().filter(Character::isLetter).count() == 26;
       }
+
+        sentence.chars().mapToObj(i -> (char)i).forEach(System.out::println);
+
+        sentence.chars().boxed().map(i -> (char)i.intValue()).forEach(System.out::println);
+
+        sentence.chars().map(i -> (char)i).forEach(System.out::println);
 ```
 - lambda (absolutely unnecessary :rofl:)
 ```
