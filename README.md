@@ -33,10 +33,9 @@
 - sum()
 - sorted()
 - toList()
-- dna.chars() // convert string to char
-- mapToObj(c -> (char) c) // when you use the chars() method on a String, it returns an IntStream representing the characters of the string as integer values. Each integer value corresponds to the Unicode code point of the character. However, to work with characters in a more convenient way, you often want to convert these integer values back to characters. That's why we use the mapToObj() method to convert each integer value to its corresponding character representation.
-- map(DnaStrand :: dna_helper) // applying a function to each element
-- map(Object::toString) // convert chat to string
+- dna.chars() // convert string to int stream that can represent char
+- mapToObj(c -> (char) c)
+- map(DnaStrand :: dna_helper) // applying a function to each element, __has to return something, can not be void__
 - collect(Collectors.joining()); //join the strings
 ```
     public static String makeComplement(String dna) {
@@ -46,6 +45,15 @@
         .map(Object::toString)
         .collect(Collectors.joining());
     }
+```
+- distinct()
+- count()
+- filter()
+```
+    \\ java char[] behaves differently than string[], see detect_program main
+    public static boolean check_flex(String sentence){
+        return sentence.toLowerCase().chars().map(i -> (char) i).distinct().filter(Character::isLetter).count() == 26;
+      }
 ```
 - lambda (absolutely unnecessary :rofl:)
 ```
