@@ -82,6 +82,17 @@ public class Main {
     }
   }
 ```
+- map() vs mapToObj(), map() will have the same input and output type, usually primitive
+```
+    public static Integer squareDigits_flex(Integer n){
+      return Integer.parseInt(String.valueOf(n)
+      .chars()
+      .map(i -> Integer.parseInt(String.valueOf((char)i)))
+      .map(i -> (int)Math.pow(i, 2))
+      .mapToObj(Integer::toString) // won't work with map()
+      .collect(Collectors.joining("")));
+    }
+```
 
 ## Python Flex
 - Set

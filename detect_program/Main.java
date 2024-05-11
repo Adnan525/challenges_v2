@@ -14,7 +14,7 @@ public class Main {
         char[] char_arr = sentence.toLowerCase().toCharArray();
         for(char c : char_arr){
             if((int)c >= 97 && (int)c <= 122)
-                test.add(c);
+                test.add(c); 
         }
         System.out.println(test.size());
         System.out.println(test);
@@ -28,19 +28,21 @@ public class Main {
         String sentence = "hello world";
         char[] char_arr = sentence.toCharArray();
 
-        System.out.println("String Array");
-        Arrays.asList(sentence.split("")).stream()
-                                               .forEach(System.out::println);
+        // System.out.println("String Array");
+        // Arrays.asList(sentence.split("")).stream()
+        //                                        .forEach(System.out::println);
 
-        System.out.println("Char array : ");
-        Arrays.asList(char_arr).stream()
-                .forEach(System.out::println);
+        // System.out.println("Char array : ");
+        // Arrays.asList(char_arr).stream()
+        //         .forEach(System.out::println);
 
-        sentence.chars().mapToObj(i -> (char)i).forEach(System.out::println);
+        // sentence.chars().mapToObj(i -> (char)i).forEach(System.out::println);
 
-        sentence.chars().boxed().map(i -> (char)i.intValue()).forEach(System.out::println);
+        // sentence.chars().boxed().map(i -> (char)i.intValue()).forEach(System.out::println);
 
         sentence.chars().map(i -> (char)i).forEach(System.out::println);
+        // sentence.codePoints().map(i -> (char)i).forEach(System.out::println);
+        // sentence.chars().boxed().map(i -> (char)i.intValue()).forEach(System.out::println);
       }
     
 }
