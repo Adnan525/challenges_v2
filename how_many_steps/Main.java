@@ -2,7 +2,7 @@ package how_many_steps;
 
 public class Main {
     public static Integer count_steps(int a, int b){
-        double count = Math.log(b/a) / Math.log(2);
+        double count = Math.log((double)b/a) / Math.log(2);
         if (count < 1)
             return b-a;
         else if((int)count - count == 0.0)
@@ -18,7 +18,7 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        System.out.println(count_steps(1, 10));
+        System.out.println(count_steps(462, 5068));
     }
     
 }
