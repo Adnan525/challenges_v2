@@ -109,3 +109,16 @@ def is_pangram(s:str):
 def is_pangram_flex(s):
     return set(string.ascii_lowercase).issubset(s.lower())
 ```
+## Regex
+- capturing group
+```
+    public static String pigIt_ultraFlex(String str)
+    {
+        /*
+         * capturing groups are separated using ()
+         * first (\\w) captures the 1st character and referred using $1
+         * 2nd capturing group(\\w*) captures the rest of the word and referred using $2
+         */
+        return str.replaceAll("(\\w)(\\w*)", "$2$1ay");
+    }
+```
