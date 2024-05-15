@@ -109,6 +109,10 @@ def is_pangram(s:str):
 def is_pangram_flex(s):
     return set(string.ascii_lowercase).issubset(s.lower())
 ```
+- java map(s -> s-1<0 ? s : s-1) equivalent
+```
+transformed_numbers = list(map(lambda s: s if s - 1 < 0 else s - 1, candles))
+```
 ## Regex
 - capturing group
 ```
