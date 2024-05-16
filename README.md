@@ -93,6 +93,18 @@ public class Main {
       .collect(Collectors.joining("")));
     }
 ```
+- sort hashmap
+```
+SortedMap<String, Object> sortedMap = new TreeMap<>(h);
+```
+- .toArray(new Object[0][0]) converts the list to a 2D array of type Object[][]. The empty array new Object[0][0] is used just to specify the array type.
+```
+Object[][] result = IntStream.range(0, values.length)
+                 .mapToObj(i -> new Object[]{keys[i], values[i]})
+                 .collect(Collectors.toList())
+                 .toArray(new Object[0][0]);
+
+```
 
 ## Python Flex
 - Set
