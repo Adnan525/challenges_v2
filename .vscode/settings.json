@@ -1,3 +1,5 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    // "java.testClass": "javac SolutionTest.java",
+    // "java.testMethod": "test"
 }
